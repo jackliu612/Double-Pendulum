@@ -1,7 +1,7 @@
 //Equations stolen from https://www.myphysicslab.com/pendulum/double-pendulum-en.html
 var canvas;
 var pg;
-var r1 = 100, r2 = 100, m1 = 5, m2 = 5;
+var r1 = 100, r2 = 100, m1 = 6, m2 = 6;
 var a1 = Math.random() * Math.PI * 2, a2 = Math.random() * Math.PI * 2;
 var a1_v = 0, a2_v = 0;
 var a1_a = 0, a2_a = 0;
@@ -48,7 +48,7 @@ function draw() {
     var y2 = y1 + cos(a2) * r2;
     line(x1, y1, x2, y2);
 
-    //pg.stroke((h++)%cMax, cMax, cMax);
+    pg.stroke((x2+r1+r2)/2/(r1+r2)*cMax, cMax/2, cMax);
     pg.line(prevX, prevY, x2, y2);
     prevX = x2;
     prevY = y2;
